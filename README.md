@@ -1,5 +1,5 @@
 <h1>실행방법</h1>
-<hr>
+
 1. 실행 환경 (나의 환경)
     1-1. macOS Big Sur
     1-2. Apache Cordova
