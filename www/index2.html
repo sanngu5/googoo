@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Album example · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/album/">
+
+    <!-- Bootstrap core CSS -->
+<link href="./css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="./css/index.css" rel="stylesheet">
+  </head>
+  
+  <body>
+
+    <header>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center"> 
+            <strong>GooGoo</strong>
+          </a>
+        </div>
+      </div>
+    </header>
+
+
+    <main role="main">
+
+      <section class="jumbotron text-center">
+        <div class="container">
+          <h1 id="averagePrice">월평균 0원</h1>
+          <p class="lead text-muted">의 구독료를 지불하고 있습니다.</p>
+          <p>
+            <a href="./accordion.html" class="btn btn-primary my-2" id="addPlanbtn">구독서비스 추가하기</a>
+          </p>
+        </div>
+      </section>
+
+      <div class="album py-5">
+        <div class="container"> 
+
+          <div class="row" id ="planList">
+
+            <!--
+            <div class="col-md-4" id="plan">
+              <div class="card mb-4 shadow-sm">
+                <img class="bd-placeholder-img card-img-top" width="100%" height="255" src="./img/netflix.png">
+                <div class="card-body">
+                  <p class="card-text">[넷플릭스] 스탠다드 이용권 (월 12,000원)</p>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="btn-group">
+                      <button type="button" class="btn btn-sm btn-outline-secondary">수정</button>
+                      <button type="button" class="btn btn-sm btn-outline-secondary">구독 취소</button>
+                    </div>
+                    <small class="text-muted">다음 결제일: 12.11.(수)</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+            -->
+  
+          </div>
+
+
+           <!--모달 버튼 안보이게 해둠-->
+          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" id="modalBtn">
+            Launch demo modal
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLabel">정말 삭제하시겠습니까?</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-dismiss="modal" id="noBtn">아니오</button>
+                  <button type="button" class="btn btn-primary" id="yesBtn">네</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </main>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="./js/vendor/jquery.slim.min.js"><\/script>')</script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+    <!--<script type="text/javascript" src="http://code.jquery.com/jquery.min.js"></script>-->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+      <script src="./js/init.js"></script>
+    <script src="./cordova.js"></script>
+  </body>
+
+
+</html>

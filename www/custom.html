@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Jekyll v4.1.1">
+    <title>Checkout example · Bootstrap</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/4.5/examples/checkout/">
+
+    <!-- Bootstrap core CSS -->
+    <link href="./css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Datepicker -->
+    <link rel="stylesheet" href="http://code.jquery.com/ui/1.8.18/themes/base/jquery-ui.css" type="text/css" />
+
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+    <!-- Custom styles for this template -->
+    <link href="./css/custom.css" rel="stylesheet">
+    <link href="./css/index.css" rel="stylesheet">
+
+  </head>
+
+
+  <body>
+    
+    <header>
+      <div class="navbar navbar-dark bg-dark shadow-sm">
+        <div class="container d-flex justify-content-between">
+          <a href="#" class="navbar-brand d-flex align-items-center"> 
+            <strong>GooGoo</strong>
+          </a>
+          <a href="./index2.html" target="_self">
+              <svg width="37" height="37" viewBox="0 0 16 16" class="bi bi-x" fill="#FFFFFF" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/>
+              </svg>
+          </a>
+
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      
+      <br>
+
+      <div class="row">
+        
+        <div class="col-md-8 order-md-1">
+          <h4 class="mb-3">등록 정보</h4>
+  
+            <div class="row">
+
+              <div class="col-md-6 mb-3">
+                <label for="sName">서비스 이름</label>
+                <input type="text" class="form-control" id="sName" placeholder="" value="" required>
+                <div class="invalid-feedback" id="warningName">
+                  이름을 입력세요.
+                </div>
+              </div>
+
+              <div class="col-md-6 mb-3">
+                <label for="sInterval">요금</label>
+                <select class="custom-select d-block w-100" id="sInterval" required>
+                  <option value="">지불 주기</option>
+                  <option value="30일">30일</option>
+                  <option value="1개월">1개월</option>
+                  <option value="3개월">3개월</option>
+                  <option value="6개월">6개월</option>
+                  <option value="1년">1년</option>
+                </select>
+                <div class="invalid-feedback" id="warningInterval">
+                  지불 주기를 선택하세요.
+                </div>
+                <input type="text" class="form-control" type="number" min="0"  id="sPrice" placeholder="지불 금액" value="" required>
+                <div class="invalid-feedback"  id="warningPrice">
+                  금액을 입력하세요. 0이상의 숫자만 허용됩니다.
+                </div>
+
+              </div>
+
+               <div class="col-md-6 mb-3">
+                <label for="sShare">공동 납부</label>
+                <select class="custom-select d-block w-100" id="sShare" required>
+                  <option value="1">안 함</option>
+                  <option value="2">2명</option>
+                  <option value="3">3명</option>
+                  <option value="4">4명</option>
+                  <option value="5">5명</option>
+                  <option value="6">6명</option>
+                  <option value="7">7명</option>
+                  <option value="8">8명</option>
+                  <option value="9">9명</option>
+                  <option value="10">10명</option>
+                </select>
+              </div>
+
+            </div>
+
+            <hr class="mb-4">
+
+            <h4 class="mb-3">마지막 결제일</h4>
+            <div class="d-block my-3">
+              <input type="text" class="form-control" id="datePicker" required>
+            </div>
+            <div class="invalid-feedback" id="warningBillDate">
+              마지막 결제일을 선택하세요.
+            </div>
+
+
+            <hr class="mb-4">
+
+            <h4 class="mb-3">푸시 알림 설정</h4>
+            <div class="d-block my-3">
+              <select class="custom-select d-block w-100" id="sPush" required>
+                  <option value="하루 전">하루 전</option>
+                  <option value="일주일 전">일주일 전</option>
+                  <option value="안 함">안 함</option>
+                </select>
+            </div>
+            <br>
+
+            <button class="btn btn-primary btn-lg btn-block" type="submit" id="submitPlan">완료!</button>
+
+        </div>
+      </div>
+    </div>
+    <!--부트스트랩-->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="../assets/js/vendor/jquery.slim.min.js"><\/script>')</script><script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/custom.js"></script>
+
+    <!--데이트피커-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="http://code.jquery.com/ui/1.8.18/jquery-ui.min.js"></script>
+    <script>
+      $(function() {
+        $("#datePicker").datepicker({
+            dateFormat: "yy.mm.dd"
+        });
+      })
+    </script>
+    <script src="./cordova.js"></script>
+  </body>
+</html>
